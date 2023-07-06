@@ -33,3 +33,39 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 - All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 - A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+
+## To validate your code with mypy, follow these steps:
+
+Step 1: Install mypy (if not already installed)
+   - If you haven't installed mypy yet, you can install it using pip (assuming you have Python and pip installed). Open your terminal or command prompt and run the following command:
+     ```
+     pip install mypy
+     ```
+
+Step 2: Create a configuration file (optional)
+   - You can create a configuration file called `mypy.ini` or `setup.cfg` in the root directory of your project to configure mypy's behavior. This step is optional, but it allows you to customize mypy's settings. Here's an example of a basic `mypy.ini` file:
+     ```
+     [mypy]
+     python_version = 3.8
+     strict = True
+     ignore_missing_imports = True
+     ```
+
+Step 3: Run mypy on your code
+   - Open your terminal or command prompt and navigate to the root directory of your project.
+   - Run mypy with the desired options, followed by the path to your code files or directories. For example:
+     ```
+     mypy path/to/your/code.py
+     ```
+     You can also specify multiple files or directories separated by spaces.
+
+Step 4: Review the mypy output
+   - After running mypy, it will analyze your code and provide output based on its findings. If there are any type errors or inconsistencies, mypy will report them along with the corresponding file and line number.
+   - Review the output to identify any potential issues or areas where your code might require modifications to ensure type correctness.
+
+Step 5: Fix type errors
+   - Based on the feedback from mypy, make the necessary changes to your code to fix any type errors or inconsistencies.
+   - Rerun mypy after making the changes to ensure that the issues have been resolved.
+
+By following these steps, you can use mypy to validate your code and ensure type safety in your Python projects. Remember that mypy performs static type checking, so it can catch many potential errors before your code is even executed.
